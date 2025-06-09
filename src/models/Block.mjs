@@ -1,5 +1,4 @@
 import { MINE_RATE } from '../utilities/config.mjs';
-import { createHash } from '../utilities/hash.mjs';
 import { GENESIS_BLOCK } from './genesis.mjs';
 
 export default class Block {
