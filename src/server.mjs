@@ -2,6 +2,10 @@ import { app } from './app.mjs';
 import blockchainRoutes from './routes/blockchain-routes.mjs';
 import networkServer from './network.mjs';
 import Blockchain from './models/Blockchain.mjs';
+import fs from 'fs/promises';
+import path from 'path';
+import errorHandler from './middleware/errorHandler.mjs';
+import { db } from './db/database.mjs';
 
 export const blockChain = new Blockchain();
 export const server = new networkServer({ blockchain: blockChain });
@@ -9,6 +13,16 @@ export const server = new networkServer({ blockchain: blockChain });
 const DEFAULT_PORT = 3000;
 const ROOT_NODE = `http://localhost:${DEFAULT_PORT}`;
 let NODE_PORT;
+
+app.use(errorHandler);
+app.get('/api/v1/blocks', async(req,res) => {
+  const result = await db.all('SELECT * FROM blocks');
+})
+
+app.post('api/v1/blocks', (req, res) => {
+  
+})
+req.body.id = crypto.randomUUID().replaceAll('-','');
 
 app.use('/api/blocks/', blockchainRoutes);
 
