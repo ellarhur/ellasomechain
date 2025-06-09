@@ -7,7 +7,7 @@ export let db;
 export const connectDB = async () => {
     try {
         db = await open({
-            filename: `./src/db/${process.env.DATABASE}`,
+            filename: `./src/db/${process.env.}`,
             driver: sqlite3.Database
         })
     } catch (error) {
