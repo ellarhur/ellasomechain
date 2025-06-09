@@ -1,7 +1,7 @@
 import { app } from './app.mjs';
 import blockchainRoutes from './routes/blockchain-routes.mjs';
 import networkServer from './network.mjs';
-import Blockchain from './models/Blockchain.mjs';
+import Blockchain from './models/blockchain/Blockchain.mjs';
 import fs from 'fs/promises';
 import path from 'path';
 import errorHandler from './middleware/errorHandler.mjs';
@@ -20,7 +20,7 @@ app.get('/api/v1/blocks', async(req,res) => {
 })
 
 app.post('api/v1/blocks', (req, res) => {
-  
+
 })
 req.body.id = crypto.randomUUID().replaceAll('-','');
 
