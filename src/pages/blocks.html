@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/app.mjs" defer></script>
+    <script src="./src/js/navbar.js" defer></script>
+    <title>Somechain - The official website for the Somechain blockchain.</title>
+    <link rel="stylesheet" href="./src/css/app.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="./index.html" class="header-title">
+            <img src="./src/images/somechainlogo.jpg" alt="Somechain Logo" class="logo-image">
+        </a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./src/pages/about.html">About us</a></li>
+            <li><a href="./src/pages/blockchain.html">Current projects</a></li>
+            <li><a href="./src/pages/blocks.html">All donations</a></li>
+        </ul>
+    </nav>
+    <main class="blocks-container">
+        <div class="search-container">
+            <h2>Search for a specific block using its hash</h2>
+            <form id="search-form" class="search-form">
+              <div class="form-group">
+                <input type="text" id="search-input" placeholder="Enter block hash here" required>
+                <button type="submit" class="bigbutton">Search</button>
+              </div>
+            </form>
+            <div id="search-results"></div>
+          </div>
+        </div>
+        </main>
+</body>
+</html>
