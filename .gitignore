@@ -48,3 +48,10 @@ build/
 # Temporary files
 tmp/
 temp/
+
+JWT_SECRET=nytt_hemligt_värde
+MONGODB_URI=din_mongodb_uri
+PUB_KEY=ny_pubnub_key
+SUB_KEY=ny_pubnub_key
+SEC_KEY=ny_pubnub_key
+USER_ID=nytt_user_id
