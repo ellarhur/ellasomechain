@@ -14,3 +14,4 @@ export const connectDB = async () => {
       throw new AppError(error.message,500)
     }
 }
+ 

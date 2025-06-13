@@ -6,13 +6,17 @@ import fs from 'fs/promises';
 import path from 'path';
 import errorHandler from './middleware/errorHandler.mjs';
 import { db } from './db/database.mjs';
+import usersRouter from './routes/users-routes.mjs';
+
 
 export const blockChain = new Blockchain();
 export const server = new networkServer({ blockchain: blockChain });
 
 const DEFAULT_PORT = 3000;
 const ROOT_NODE = `http://localhost:${DEFAULT_PORT}`;
-let NODE_PORT;
+let NODE_PORT;¨
+
+app.use('/api/v1/users', usersRouter);
 
 app.use(errorHandler);
 app.get('/api/v1/blocks', async(req,res) => {

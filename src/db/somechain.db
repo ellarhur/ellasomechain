@@ -1,0 +1,3 @@
+.tables  -- Visa alla tabeller
+.schema blocks  -- Visa blocks-tabellens struktur
+.schema transactions  -- Visa transactions-tabellens struktur
